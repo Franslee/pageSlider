@@ -4,40 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
 	<meta content="telephone=no" name="format-detection"/>
-	<meta name="title" content=""/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
-	<title>demo</title>
-	<style>
-	*{ margin:0; padding:0;}
-	</style>
+	<title>demo - pageSlider</title>
+	<!--引入pageSlider所需样式表-->
 	<link rel="stylesheet" href="../dist/pageSlider.css">
+	<!--引入zepto.js-->
 	<script src="http://cdn.bootcss.com/zepto/1.1.4/zepto.js"></script>
-<body>
-	<!--滑动页面-->
-	<div class="section sec1" style="background-color:#FFCCCC;">
-1
-	</div>
-	<div class="section sec2" style="background-color:#4ACBF7;">
-2
-	</div>
-	<div class="section sec3" style="background-color:#63E339;">
-3
-	</div>
-	<div class="section sec4" style="background-color:#F7D34A;">
-4
-	</div>
-	<div class="section sec5" style="background-color:#FF8ECE;">
-5
-	</div>
-	<div class="section sec6" style="background-color:#ACDCED;">
-6
-	</div>
+	<!--引入pageSlider.js文件-->
 	<script src="../dist/pageSlider.js"></script>
+<body>
+	<!--DOM结构-->
+	<div class="section sec1" style="background-color:#FFCCCC;">1</div>
+	<div class="section sec2" style="background-color:#4ACBF7;">2</div>
+	<div class="section sec3" style="background-color:#63E339;">3</div>
+	<div class="section sec4" style="background-color:#F7D34A;">4</div>
+	<div class="section sec5" style="background-color:#FF8ECE;">5</div>
+	<div class="section sec6" style="background-color:#ACDCED;">6</div>
+
 	<script>
-		window.onload = function(){
+		$(function(){
 			PageSlider.case();
-		}
+		});
 	</script>
 </body>
 </html>
