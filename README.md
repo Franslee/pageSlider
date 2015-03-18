@@ -1,4 +1,4 @@
-# PageSlider #  
+# PageSlider #
  
 PageSlider 是一个基于zepto.js用于实现H5单页面跟随手指滑动切换的组件，目前支持页面上下滑动切换,支持移动端touch设备，支持通过transform3D启动GPU加速。
 
@@ -9,21 +9,26 @@ PageSlider 是一个基于zepto.js用于实现H5单页面跟随手指滑动切�
 
 ## 用法 ##
 
-HTML标签
+HTML结构
 
 ```html
-<div class="section sec1"></div>
-<div class="section sec2"></div>
-<div class="section sec3"></div>
-<div class="section sec4"></div>
-<div class="section sec5"></div>
-<div class="section sec6"></div>
-…
+<!DOCTYPE html>
+<html>
+	<head>
+	  <!-- styles, scripts, etc -->
+	</head>
+	<body>
+		<div class="section sec1"></div>
+		<div class="section sec2"></div>
+		<div class="section sec3"></div>
+		<div class="section sec4"></div>
+	</body>
+</html>
 ```
 
 在页面中引入组件所需样式表文件pageSlider.css
 
-```css
+```html
 <link rel="stylesheet" href="../dist/pageSlider.css">
 ```
 
@@ -47,3 +52,22 @@ $(function() {
 });
 ```
 
+## 设置 settings ##
+
+初始化PageSlider组件的时候，支持传入一个参数，用于配置组件功能
+
+```js
+PageSlider.case(optOrIndex);
+```
+
+* 参数optOrIndex可以是一个数字(number),用于设置初始显示的页码
+* 参数optOrIndex也可以是一个json对象，允许的keys见下表
+
+|| key || type || 默认值 || 描述
+|| startPage || number || 1 || 初始化时显示页面的页码
+|| range || number || 70 || 页面回弹的最大距离(像素)，超过这个值，将切换页面
+|| duration || number || 200 || 页面回弹的持续时间(毫秒)
+|| loop || boolean || false || 是否循环切换
+|| elastic || boolean || true || 位于顶部(底部)时，是否依然可以向上(向下)拉动
+|| translate3d || boolean || true || 是否开启translate3d
+|| callback || object || {} || 页面切换回调函数集合。该json对象每个键为一个数值，对应一个页码，值为一个function,滑动到该页面时触发。如：{2:function(){alert('滑动到了第二页');},4:function(){alert('滑动到了第四页');}} 滑动到第二和第四页时将触发对应的回调函数
