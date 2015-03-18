@@ -113,3 +113,18 @@ PageSlider.case(optOrIndex);
 		<td>页面切换回调函数集合。该json对象每个键为一个数值，对应一个页码，值为一个function,滑动到该页面时触发。如：{2:function(){alert('滑动到了第二页');},4:function(){alert('滑动到了第四页');}} 滑动到第二和第四页时将触发对应的回调函数</td>
 	</tr>
 </table>
+
+```js
+PageSlider.case({loop:true});
+```
+
+## 切换到指定页面 ##
+
+在页面初始化后，可调用组件的go方法跳转到指定页面。
+
+```js
+//PageSlider初始化
+var pageSlider = PageSlider.case();
+//跳转到第3页
+pageSlider.go(3);
+```
