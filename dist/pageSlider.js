@@ -1,4 +1,4 @@
-/**
+/*
  * pageSlider - Zepto plugin for mobile single page sliding
  *
  * Copyright (c) 2015 Frans Lee dmon@foxmail.com
@@ -27,7 +27,7 @@
 			this.index = 0,
 			this.curPagePos = 0,
 			this.nextPagePos = 0,
-			this.pageHeight =0,
+			this.pageHeight = 0,
 			this.prevPagePos = 0;
 
 			this.opt = {
@@ -240,7 +240,7 @@
 			return PageSlider;
 		});
 	} else if (typeof module !== 'undefined' && module.exports) {
-		module.exports = PageSlider.attach;
+		module.exports = PageSlider.case;
 		module.exports.PageSlider = PageSlider;
 	} else {
 		window.PageSlider = PageSlider;

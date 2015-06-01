@@ -240,7 +240,7 @@
 			return PageSlider;
 		});
 	} else if (typeof module !== 'undefined' && module.exports) {
-		module.exports = PageSlider.attach;
+		module.exports = PageSlider.case;
 		module.exports.PageSlider = PageSlider;
 	} else {
 		window.PageSlider = PageSlider;
