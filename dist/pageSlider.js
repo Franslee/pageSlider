@@ -95,7 +95,7 @@
 
 		$curSec.addClass('ani').siblings('.section').removeClass('ani');
 		//执行回调
-		typeof(this.opt.callback['sec'+cur])=='function' && this.opt.callback['sec'+cur]();
+		typeof(this.opt.callback[cur])=='function' && this.opt.callback[cur]();
 	};
 
 	/**
